@@ -32,7 +32,7 @@ public class Lista {
             System.out.println(lista.get(i));
         }
         
-       
+
     }
     
 }
