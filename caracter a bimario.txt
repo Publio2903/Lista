@@ -1,0 +1,12 @@
+
+OBTENER VALOR EN ASCCI
+class Main {
+	public static void main(String[] args) {
+		// https://parzibyte.me
+		char caracter = '@';
+		int representacion = (int) caracter;
+		System.out.println("El valor ASCII es: " + representacion);
+	}
+}
+
+XXXXXXXXXXXXXXXXXXXXXX
