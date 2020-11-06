@@ -5,10 +5,13 @@
  */
 package lista;
 
+import java.sql.Connection;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ALFM
@@ -20,6 +23,10 @@ public class Lista {
      */
     public static void main(String[] args) {
     // TODO code application logic here
+        Conexion1 cindy = new Conexion1();
+        cindy.conectar();
+        Connection connection = cindy.getConnetion();
+        
         Scanner scanner = new Scanner(System.in);
         List<String> lista = new ArrayList();
         //bucle infinito While(), se repite el bucle hasta que presione el numero "2"
@@ -33,10 +40,14 @@ public class Lista {
                 System.out.println("Ingrese nombre: ");
                 String name =  scanner.next();
                 lista.add(name);
-            }else if( a == 2){// si elige 2 - termina el procesos y visualiza la lista.
+                       
+            }
+            
+            else if( a == 2){// si elige 2 - termina el procesos y visualiza la lista.
                 System.out.println("Proceso terminado, nombres en la lista: ");
                 for(int i = 0; i<lista.size(); i++){
                     System.out.println(lista.get(i));
+                    
                 }
                 //sale del while infinito y termina la ejecuciÃ³n del programa
                 break;
